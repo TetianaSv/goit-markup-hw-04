@@ -574,6 +574,8 @@ footer .section {
 }
 .card-img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .card-title {
@@ -604,11 +606,12 @@ footer .section {
   padding: 20px 24px;
 }
 .card-box {
-  width: 370px;
-  /* width: calc((100%-60px) / 3); */
+  width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .card-box:nth-child(3n) {
   margin-right: 0px;
