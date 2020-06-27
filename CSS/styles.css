@@ -44,7 +44,10 @@ header {
   font-weight: bold;
   font-size: 26px;
 }
-
+.item a:hover,
+.item a:focus {
+  color: #2196f3;
+}
 header .logo {
   margin-right: 85px;
 }
@@ -79,14 +82,8 @@ header .logo {
   line-height: 16px;
   letter-spacing: 0.02em;
 }
-header .adress-mail:hover {
-  color: #2196f3;
-}
-header .adress-mail:focus {
-  color: #2196f3;
-}
-.adress-tel {
-  color: #757575;
+.auth-nav {
+  display: flex;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -94,20 +91,41 @@ header .adress-mail:focus {
   line-height: 16px;
   letter-spacing: 0.02em;
 }
-header .adress-tel:hover {
+header .auth-item:hover,
+header .auth-item:focus {
   color: #2196f3;
-}
-header .adress-tel:focus {
-  color: #2196f3;
+  fill: #2196f3;
 }
 .adress-nav {
   margin-left: auto;
 }
-.auth-nav {
-  display: flex;
-}
 .auth-nav .item + .item {
   margin-left: 30px;
+}
+.auth-item {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  fill: #757575;
+}
+.auth-item a {
+  display: flex;
+  align-items: center;
+}
+.icon-mail {
+  width: 16px;
+  height: 11px;
+  margin-right: 10px;
+}
+.icon-phone {
+  width: 10px;
+  height: 15px;
+  margin-right: 10px;
 }
 /* HERO */
 .hero {
@@ -167,11 +185,25 @@ header .adress-tel:focus {
 .feature-list {
   display: flex;
 }
+.feature-main {
+  width: calc((100% - 30px * 3) / 4);
+}
 .feature-main:not(:last-child) {
   margin-right: 30px;
 }
-.feature-img img {
+.feature-img {
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
+  background-color: #f5f4fa;
+  border-radius: 4px;
+}
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  width: 70px;
+  height: 70px;
+  margin: 25px 100px;
 }
 .feature-title {
   margin-top: 0px;
@@ -296,13 +328,32 @@ header .adress-tel:focus {
 }
 .social-links {
   display: flex;
+  justify-content: center;
 }
-/* .social-icon:not(last-child) {
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+}
+.social-icon:hover,
+.social-icon:focus {
+  background-color: #2196f3;
+  border-radius: 50%;
+  fill: var(--white-text);
+}
+.social-links li:not(:last-child) {
   margin-right: 10px;
-} */
+}
 .customer {
   padding-top: 94px;
 }
+/* .customer svg {
+  fill: #afb1b8;
+} */
 .customers-main {
   display: flex;
   justify-content: space-between;
@@ -310,17 +361,23 @@ header .adress-tel:focus {
 .customers-list:not(:last-child) {
   margin-right: 30px;
 }
-.customer-item img {
+.customer-item {
   width: 170px;
   height: 90px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: #afb1b8;
 }
-/* Штука не работает */
-.customer-item:hover {
-  color: #2196f3;
+.customer-item:hover,
+.customer-item:focus {
+  fill: #2196f3;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
 }
+
 /* FOOTER */
 footer {
   background-color: #2f303a;
@@ -358,7 +415,28 @@ footer .logo {
   display: flex;
   flex-direction: column;
 }
+.footer-links {
+  display: flex;
+}
 
+.footer-linkbox:hover,
+.footer-linkbox:focus {
+  background-color: #2196f3;
+  fill: var(--white-text);
+}
+.footer-links li:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-linkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--white-text);
+}
 footer .logo-accent {
   color: white;
 }
@@ -398,8 +476,25 @@ footer .adress-tel {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-
+.feedback {
+  display: flex;
+}
+.feedback input {
+  width: 358px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 12px;
+}
 .footer-button {
+  width: 200px;
+  height: 50px;
+  margin-left: 10px;
+  justify-content: center;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   color: var(--white-text);
   font-family: Roboto;
   font-style: normal;
@@ -410,6 +505,9 @@ footer .adress-tel {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+}
+footer .socialnet {
+  margin-left: 10px;
 }
 .footer-copiright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
