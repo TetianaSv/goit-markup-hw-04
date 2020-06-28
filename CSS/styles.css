@@ -47,12 +47,16 @@ header {
 .item a:hover,
 .item a:focus {
   color: #2196f3;
+  cursor: pointer;
 }
 header .logo {
   margin-right: 85px;
 }
 .logo-accent {
   color: #000000;
+}
+.link.current {
+  color: #2196f3;
 }
 .site-nav {
   display: flex;
@@ -95,6 +99,7 @@ header .auth-item:hover,
 header .auth-item:focus {
   color: #2196f3;
   fill: #2196f3;
+  cursor: pointer;
 }
 .adress-nav {
   margin-left: auto;
@@ -344,6 +349,7 @@ header .auth-item:focus {
   background-color: #2196f3;
   border-radius: 50%;
   fill: var(--white-text);
+  cursor: pointer;
 }
 .social-links li:not(:last-child) {
   margin-right: 10px;
@@ -376,6 +382,7 @@ header .auth-item:focus {
   fill: #2196f3;
   border: 1px solid #2196f3;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 /* FOOTER */
@@ -423,6 +430,7 @@ footer .logo {
 .footer-linkbox:focus {
   background-color: #2196f3;
   fill: var(--white-text);
+  cursor: pointer;
 }
 .footer-links li:not(:last-child) {
   margin-right: 10px;
@@ -561,6 +569,7 @@ footer .section {
 .filtr-button:hover {
   background-color: #2196f3;
   color: var(--white-text);
+  cursor: pointer;
 }
 .filtr-button:focus {
   background-color: #2196f3;
